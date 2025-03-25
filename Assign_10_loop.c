@@ -4,53 +4,55 @@
 int main(){
     
     // 1. Write a program to find the Nth term of the Fibonacci series.
-            //   int a = 0 , b= 1, temp=0;
+            //   int a = -1 , b= 1, c=0;
             //   int n;
             //   scanf("%d",&n);
-            //   for (int i = 2; i <= n; i++)
+            //   for (int i = 0; i <= n; i++)
             //   {
-            //     temp =    a + b;
+            //     c = a + b;
             //     a = b;
-            //     b = temp;
+            //     b = c;
             //   }
             //   printf("%d",b);
 
             
     // 2. Write a program to print first N terms of Fibonacci series
-            //   int a = 0 , b= 1, temp=0;
+            //   int a = -1 , b= 1, c=0;
             //   int n;
             //   scanf("%d",&n);
-            //   printf("%d %d",a,b);
-            //   for (int i = 2; i <= n; i++)
+            //   for (int i = 0; i <= n; i++)
             //   {
-            //     temp =    a + b;
-            //     printf(" %d",temp);
+            //     c = a + b;
+            //     printf(" %d",c);
             //     a = b;
-            //     b = temp;
+            //     b = c;
             //   }
           
 
     // 3. Write a program to check whether a given number is there in the Fibonacci series or
     // not.
 
-        // int a = 0 ,b = 1, temp =0,n,isbelong = 0;
+        // int a = -1 ,b = 1, c = 0,n;
+        // printf("Enter a number: ");
         // scanf("%d",&n);
-        // for(int  i = 0; i < n ; i++){
-        //     temp = a + b;
-        //      if(temp == n){
-        //      isbelong = 1;
+        // for(int  i = 0;; i++){
+        //     c = a + b;
+        //      if(c == n){
+        //         printf("%d belong to fabonacci series",n);
+        //      break;
+        //     }
+        //     if(c > n){
+        //         printf("%d not belong to fabonacci series",n);
+        //         break;
         //     }
         //     a = b;
-        //     b = temp;
+        //     b = c;
         //   }
-        // if(isbelong){
-        //     printf("%d belong to fabonacci series",n);
-        // }else{
-        //     printf("%d not belong to fabonacci series",n);
-        // }
+        
 
     // 4.
     // Write a program to calculate HCF of two numbers
+       
         // int a,b,rem;
         // printf("Enter 2 number to find HCF ");
         // scanf("%d%d",&a,&b);
@@ -67,7 +69,18 @@ int main(){
         //     }
         // }
         // printf("The HCF is %d",a);
-      
+
+    // 2nd method of finding HCF
+
+        //    int a,b ;
+        //    scanf("%d%d",&a,&b);
+        //     for(int h = a>b?b:a;h>=1;h--){
+        //          if(a%h == 0 && b%h==0){
+        //             printf("HCF is %d",h);
+        //             break;
+        //          }
+        //     }
+        
     
     // 5.
     // Write a program to check whether two given numbers are co-prime numbers or not
@@ -95,19 +108,17 @@ int main(){
      
     // 6.
     // Write a program to print all Prime numbers under 100
-        //  int n=2 ,isPrime = 1;
+        //  int n=2 ,i ;
         //  while(n != 100){
-        //  for(int i = 2 ; i <= sqrt(n);i++){
+        //  for( i = 2 ; i <= n;i++){
         //     if(n%i == 0 ){
-        //         isPrime = 0;
+        //         break;
         //     }
         //  }
-        //  if(isPrime == 1){
+        //  if(n == i){
         //     printf("%d is prime number.\n",n);
-        //  }else{
-        //     printf("%d is not prime number.\n",n);
-        //  };
-        //  isPrime = 1;
+        //  }
+         
         //  n++;
         //  }
 
@@ -125,9 +136,7 @@ int main(){
     //     }
     //     if(isPrime == 1){
     //     printf("%d is prime number.\n",num);
-    //     }else{
-    //     printf("%d is not prime number.\n",num);
-    //     };
+    //     }
     //     isPrime = 1;
     //     num++;
     //     }
@@ -170,7 +179,6 @@ int main(){
 
         //  while(copy > 0){
         //   sum += pow(copy%10,count);
-        //   printf("%d\n",sum);
         //   copy = copy/10;
         //  }
       
@@ -179,6 +187,34 @@ int main(){
         //  }else{
         //     printf("%d is not Armstrong Number",num);
         //  }
+
+//  using for loop
+
+        //  int num,count = 0,sum=0 ;
+        //  printf("Enter number to check it is Armstrong number or not: ");
+        //  scanf("%d",&num);
+        //  int num2 = num;
+        //  int num3 = num;
+        //   while (num2>0)
+        //   {
+        //     count++;
+        //     num2=num2/10;
+        //   }
+
+        // for(int i = num;i>0;i = i/10){
+        //     int d = i%10;
+        //     int p = 1;
+        //      for(int j = 0;j<count;j++){
+        //         p = p*d;
+        //      }
+        //      sum = sum + p;
+        // }
+        
+        // if (sum == num3 ){
+        //     printf("armstrong");
+        // }else{
+        //     printf("no armstrong");
+        // }
 
 
     // 10.
@@ -205,8 +241,6 @@ int main(){
     
         //  if(sum == num ){
         //     printf("%d is Armstrong Number \n",num);
-        //  }else{
-        //     printf("%d is not Armstrong Number \n",num);
         //  }
         //  num++;
         // }
